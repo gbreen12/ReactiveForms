@@ -13,7 +13,7 @@
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>ReactiveForms</PackageId>
-    <PackageVersion>0.1</PackageVersion>
+    <PackageVersion>0.2</PackageVersion>
     <Authors>Garett Breen</Authors>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Owners>Garett Breen</Owners>
@@ -22,7 +22,10 @@
     <Description>This is a set of ReactiveUI and Xamarin Forms extensions for performing common functions such as:
 
 Page Navigation
-Showing Alerts</Description>
+Showing Alerts
+
+Supports Xamarin.iOS, Xamarin.Android, Xamarin.Mac, Xamarin Forms, WPF, Windows Forms, Windows Phone 8.1.</Description>
+    <PackageProjectUrl>https://github.com/gbreen12/ReactiveForms</PackageProjectUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -73,11 +76,11 @@ Showing Alerts</Description>
     <Reference Include="System.Reactive.PlatformServices">
       <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\portable-net45+winrt45+wp8+wpa81\System.Reactive.PlatformServices.dll</HintPath>
     </Reference>
-    <Reference Include="Splat">
-      <HintPath>..\packages\Splat.1.4.0\lib\Portable-net45+win+wpa81+wp80\Splat.dll</HintPath>
-    </Reference>
     <Reference Include="ReactiveUI">
       <HintPath>..\packages\reactiveui-core.7.2.0\lib\portable-net45+netcore45+wpa81+win8+wp8+UAP10+MonoAndroid403+MonoTouch10+Xamarin.iOS10\ReactiveUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\packages\Splat.1.6.2\lib\Portable-net45+win+wpa81+wp80\Splat.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
