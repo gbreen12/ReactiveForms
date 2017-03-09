@@ -13,7 +13,7 @@ Example:
 FirstPage.xaml
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<rf:BaseNavigationPage 
+<rf:BasePage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="NugetTest.Pages.FirstPage"
@@ -22,7 +22,7 @@ FirstPage.xaml
 	xmlns:pageModels="clr-namespace:NugetTest.PageModels;assembly=NugetTest"
 	x:TypeArguments="pages:FirstPage,pageModels:IFirstPageModel">
 	<Button Text="Push Me" x:Name="ChangePageButton" />
-</rf:BaseNavigationPage>
+</rf:BasePage>
 ```
 
 FirstPageModel.cs
