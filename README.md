@@ -42,7 +42,7 @@ public class FirstPageModel : BasePageModel, IFirstPageModel
 
 ### Show Alert
 
-Any page that extends the bast page can easily show an alert. A simple alert can be shown by using the following code:
+Any page that extends the bast page can easily show an alert. A simple alert can be shown by using the following code in the view model:
 
 ```
 _alerts.OnNext(new AlertMessage("Title", "Message to show"));
