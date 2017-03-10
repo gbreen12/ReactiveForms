@@ -39,3 +39,14 @@ public class FirstPageModel : BasePageModel, IFirstPageModel
 	}
 }
 ```
+
+### Show Alert
+
+Any page that extends the bast page can easily show an alert. A simple alert can be shown by using the following code:
+
+```
+_alerts.OnNext(new AlertMessage("Title", "Message to show"));
+```
+
+This will show a default alert with "OK" as the only option. This can be changed by changing the `Cancel` attribute, or by passing in a different string for cancel in the constructor. You can also customize functionality by setting the `AcceptCommand` and/or `CancelCommand`.
+
