@@ -148,3 +148,21 @@ Two other pieces of setup must happen before you can use the navigation.
 1. The page model of the page you are navigating to must inherit from `IPageModelNavigateTo`
 2. You must setup the `Splat` connection like: `Locator.CurrentMutable.Register(() => new SecondPage(), typeof(SecondPageModel));`
 
+### NavigationModel
+
+The navigation model allows the user to setup some fields:
+
+1. `Model`: The page model you want to navigate to. Must inherit from `IPageModelNavigateTo`
+2. `ToBoCompleted`: If navigating within a command, this is the subject to be completed from the command
+3. `Animated`: Whether the page navigation should be animated
+4. `IsModel`: Whether the page should be used as a modal
+
+### NavigationBackModel
+
+The navigation back model also has some optional setup fields
+
+1. `ToBeCompleted`: If navigating within a command, this is the subject to be completed from the command
+2. `Animated`: Whether the page navigation should be animated
+3. `IsModal`: Whether the page should be used as a modal
+4. `CountToGoBack`: If you want to go back multiple pages at the same time, you can use this field
+
