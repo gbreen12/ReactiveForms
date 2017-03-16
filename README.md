@@ -143,10 +143,11 @@ public class FirstPageModel : BaseNavigationPageModel, IFirstPageModel
 }
 ```
 
-Two other pieces of setup must happen before you can use the navigation.
+Three other pieces of setup must happen before you can use the navigation.
 
 1. The page model of the page you are navigating to must inherit from `IPageModelNavigateTo`
 2. You must setup the `Splat` connection like: `Locator.CurrentMutable.Register(() => new SecondPage(), typeof(SecondPageModel));`
+3. The first page you want to use in the navigation stack must be the base page in a `NavigationPage`: `MainPage = new NavigationPage(new FirstPage());`
 
 ### NavigationModel
 
