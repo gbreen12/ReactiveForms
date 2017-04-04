@@ -4,6 +4,10 @@ Reactive Forms is a set of extensions built on Xamarin Forms and ReactiveUI. The
 
 ## Setup
 
+1. Make a new Xamarin Forms PCL project
+2. Make sure only project types that are supported are targeted (You may need to uninstall the Xamarin Forms nuget package to change the targets and then reinstall it)
+3. Add ReactiveForms nuget package to all projects (PCL, Android, iOS, etc.)
+
 ### BasePage
 
 Reactive Forms comes with a `BasePage` that abstracts some common code for setting up a page. The base page takes two arguments: The current page and the page model interface that the page uses. The interface must inherit from `IBasePageModel` and the page model must extend `BasePageModel`.

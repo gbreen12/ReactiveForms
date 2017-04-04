@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rf:BasePage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Test.Pages.TestPage"
+	xmlns:rf="clr-namespace:ReactiveForms.Pages;assembly=ReactiveForms"
+	xmlns:pages="clr-namespace:Test.Pages;assebmly=Test"
+	xmlns:pageModels="clr-namespace:Test.PageModels;assembly=Test"
+	x:TypeArguments="pages:TestPage,pageModels:ITestPageModel">
+	<StackLayout>
+		<Button Text="Show Alert" x:Name="ShowAlertButton" />
+	</StackLayout>
+</rf:BasePage>
