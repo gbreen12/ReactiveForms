@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using ReactiveUI;
 using Xamarin.Forms;
 
 namespace Test.Pages
@@ -10,6 +10,8 @@ namespace Test.Pages
 		public TestPage()
 		{
 			InitializeComponent();
+
+			this.BindCommand(ViewModel, vm => vm.ShowAlertCommand, v => v.ShowAlertButton);
 		}
 	}
 }

@@ -8,6 +8,10 @@ Reactive Forms is a set of extensions built on Xamarin Forms and ReactiveUI. The
 2. Make sure only project types that are supported are targeted (You may need to uninstall the Xamarin Forms nuget package to change the targets and then reinstall it)
 3. Add ReactiveForms nuget package to all projects (PCL, Android, iOS, etc.)
 
+## NOTE
+
+Previous version had `BaseNavigationPage`. This has been removed. Instead just use the `BasePage` inside of a normal `NavigationPage` and it will all work the same.
+
 ### BasePage
 
 Reactive Forms comes with a `BasePage` that abstracts some common code for setting up a page. The base page takes two arguments: The current page and the page model interface that the page uses. The interface must inherit from `IBasePageModel` and the page model must extend `BasePageModel`.
@@ -94,12 +98,12 @@ public class FirstPageModel : BasePageModel, IFirstPageModel
 
 ### Page Navigation
 
-Reactive Forms allows for simple page navigation. If a page extends the `BaseNavigationPage` and the page model and page model interface extend `BaseNavigationPageModel` and `IBaseNavigationPageModel` respectively, two observables are exposed: `_navigateToPage` and `_navigateBack`.  To use page navigation, do the following:
+Reactive Forms allows for simple page navigation. If a page extends the `BasePage` and the page model and page model interface extend `BasePageModel` and `IBasePageModel` respectively, two observables are exposed: `_navigateToPage` and `_navigateBack`.  To use page navigation, do the following:
 
 FirstPage.xaml
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<rf:BaseNavigationPage 
+<rf:BasePage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="NugetTest.Pages.FirstPage"
@@ -108,18 +112,18 @@ FirstPage.xaml
 	xmlns:pageModels="clr-namespace:NugetTest.PageModels;assembly=NugetTest"
 	x:TypeArguments="pages:FirstPage,pageModels:IFirstPageModel">
 	<Button Text="Push Me" x:Name="ChangePageButton" />
-</rf:BaseNavigationPage>
+</rf:BasePage>
 ```
 
 FirstPageModel.cs
 ```
-public interface IFirstPageModel : IBaseNavigationPageModel
+public interface IFirstPageModel : IBasePageModel
 {
 	ReactiveCommand<Unit, Unit> NavigateToNextPageCommand { get; }
 	ReactiveCommand<Unit, Unit> NavigateBackCommand { get; }
 }
 
-public class FirstPageModel : BaseNavigationPageModel, IFirstPageModel
+public class FirstPageModel : BasePageModel, IFirstPageModel
 {
 	public FirstPageModel()
 		: base()

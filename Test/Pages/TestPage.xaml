@@ -7,7 +7,9 @@
 	xmlns:pages="clr-namespace:Test.Pages;assebmly=Test"
 	xmlns:pageModels="clr-namespace:Test.PageModels;assembly=Test"
 	x:TypeArguments="pages:TestPage,pageModels:ITestPageModel">
-	<StackLayout>
+	<StackLayout
+		HorizontalOptions="CenterAndExpand"
+		VerticalOptions="CenterAndExpand">
 		<Button Text="Show Alert" x:Name="ShowAlertButton" />
 	</StackLayout>
 </rf:BasePage>

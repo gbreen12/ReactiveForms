@@ -20,6 +20,20 @@ namespace ReactiveForms.Pages
 			{
 				await this.DisplayMessage(message);
 			});
+
+			this.WhenAnyObservable(p => p.ViewModel.NavigateToPage)
+				.ObserveOn(RxApp.MainThreadScheduler)
+				.Subscribe(async model =>
+				{
+					await this.NavigateToPageForPageModel(model);
+				});
+
+			this.WhenAnyObservable(p => p.ViewModel.NavigateBack)
+				.ObserveOn(RxApp.MainThreadScheduler)
+				.Subscribe(async model =>
+				{
+					await this.NavigateBack(model);       
+				});
 		}
 
 		/***********************************************************************************************************

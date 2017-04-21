@@ -49,11 +49,9 @@ Supports Xamarin.iOS, Xamarin.Android, Xamarin.Mac, Xamarin Forms, WPF, Windows 
     <Compile Include="HelperModels\AlertMessage.cs" />
     <Compile Include="HelperModels\NavigationBackModel.cs" />
     <Compile Include="HelperModels\NavigationModel.cs" />
-    <Compile Include="PageModels\BaseNavigationPageModel.cs" />
     <Compile Include="PageModels\BasePageModel.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\PageExtensions.cs" />
-    <Compile Include="Pages\BaseNavigationPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
